@@ -29,6 +29,7 @@ app.listen(8080, () => {
 app.get("/", (req, res) => {
   res.send("ehlrjgi");
 });
+module.exports = app;
 // const userSchema = mongoose.model(
 //   "user",
 //   new mongoose.Schema(
