@@ -20,7 +20,7 @@
 // module.exports = app;
 
 const express = require("express");
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 const app = express();
 
 app.get("/", (req, res) => {
