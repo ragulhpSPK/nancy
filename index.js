@@ -23,12 +23,10 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 
-app.listen(8080, () => {
-  console.log("narniya");
-});
 app.get("/", (req, res) => {
   res.send("ehlrjgi");
 });
+
 module.exports = app;
 // const userSchema = mongoose.model(
 //   "user",
@@ -60,13 +58,17 @@ module.exports = app;
 //     { collection: "product" }
 //   )
 // );
-// mongoose.connect("mongodb://127.0.0.1:27017/apps").then(() => {
-//   app.listen(8080, (err) => {
-//     if (!err) {
-//       console.log("server started at 8080");
-//     }
-//   });
-// });
+mongoose
+  .connect(
+    "mongodb+srv://ragulhp27:ragulhp2704@cluster0.uxfxhya.mongodb.net/antman?retryWrites=true&w=majority"
+  )
+  .then(() => {
+    app.listen(8080, (err) => {
+      if (!err) {
+        console.log("server started at 8080");
+      }
+    });
+  });
 
 //  {
 //       age: { $gte: 24, $lte: 70 },
