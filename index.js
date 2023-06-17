@@ -1,7 +1,9 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
-
+app.get("/", (req, res) => {
+  res.send("ehlrjgi");
+});
 const userSchema = mongoose.model(
   "user",
   new mongoose.Schema(
@@ -39,6 +41,7 @@ mongoose.connect("mongodb://127.0.0.1:27017/apps").then(() => {
     }
   });
 });
+
 //  {
 //       age: { $gte: 24, $lte: 70 },
 //     }
