@@ -10,9 +10,9 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 
-// app.get("/", (req, res) => {
-//   res.send("Hey this is my API running 🥳");
-// });
+app.get("/", (req, res) => {
+  res.send("Hey this is my API running 🥳");
+});
 
 // app.get("/about", (req, res) => {
 //   res.send("This is my about route..... ");
