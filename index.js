@@ -10,19 +10,19 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 
-app.get("/api", (req, res) => {
+app.get("/", (req, res) => {
   res.send("Hey this is my API running 🥳");
 });
 
-app.get("/", async (req, res) => {
-  try {
-    const result = await productSchema.find();
-    console.log(result);
-    res.send(result);
-  } catch (e) {
-    console.log(e);
-  }
-});
+// app.get("/", async (req, res) => {
+//   try {
+//     const result = await productSchema.find();
+//     console.log(result);
+//     res.send(result);
+//   } catch (e) {
+//     console.log(e);
+//   }
+// });
 
 // // Export the Express API
 
