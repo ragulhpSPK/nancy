@@ -111,6 +111,17 @@ mongoose.connect("mongodb://127.0.0.1:27017/apps").then(() => {
 //   }
 // });
 
+// app.post("/:sort", async (req, res) => {
+//   try {
+//     const { sort } = req.body;
+//     const age = sort === "low" ? "age" : "-age";
+//     const result = await userSchema.find().sort(age);
+//     return res.status(200).send({ data: result });
+//   } catch (err) {
+//     console.log(err);
+//   }
+// });
+
 // app.get("/limit", async (req, res) => {
 //   try {
 //     const result = await userSchema.find().limit(3);
