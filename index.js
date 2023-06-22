@@ -24,7 +24,7 @@ import mongoose from "mongoose";
 const app = express();
 
 app.get("/", (req, res) => {
-  res.send("ehlrjgi");
+  res.send("hello");
 });
 
 module.exports = app;
